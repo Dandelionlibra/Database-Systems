@@ -6,7 +6,7 @@ def loadfile():
     filename = input("Please enter a file name:")  
     try:
         #df = pd.read_csv(filename+".csv")
-        df = pd.read_csv("C:\\Users\\user\\OneDrive\\桌面\\course\\Database Systems\\midterm_assigment\\p.csv")
+        df = pd.read_csv("C:\\Users\\user\\OneDrive\\桌面\\course\\Database Systems\\Database-Systems_midterm\\p.csv")
         print(filename+'.csv-success!!')
         return df
     except:

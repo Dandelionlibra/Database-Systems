@@ -1,0 +1,235 @@
+Rank,CCA3,Country/Territory,Capital,Continent,Area (km2)
+1,CHN,China,Beijing,Asia,9706961
+2,IND,India,New Delhi,Asia,3287590
+3,USA,United States,"Washington, D.C.",North America,9372610
+4,IDN,Indonesia,Jakarta,Asia,1904569
+5,PAK,Pakistan,Islamabad,Asia,881912
+6,NGA,Nigeria,Abuja,Africa,923768
+7,BRA,Brazil,Brasilia,South America,8515767
+8,BGD,Bangladesh,Dhaka,Asia,147570
+9,RUS,Russia,Moscow,Europe,17098242
+10,MEX,Mexico,Mexico City,North America,1964375
+11,JPN,Japan,Tokyo,Asia,377930
+12,ETH,Ethiopia,Addis Ababa,Africa,1104300
+13,PHL,Philippines,Manila,Asia,342353
+14,EGY,Egypt,Cairo,Africa,1002450
+15,COD,DR Congo,Kinshasa,Africa,2344858
+16,VNM,Vietnam,Hanoi,Asia,331212
+17,IRN,Iran,Tehran,Asia,1648195
+18,TUR,Turkey,Ankara,Asia,783562
+19,DEU,Germany,Berlin,Europe,357114
+20,THA,Thailand,Bangkok,Asia,513120
+21,GBR,United Kingdom,London,Europe,242900
+22,TZA,Tanzania,Dodoma,Africa,945087
+23,FRA,France,Paris,Europe,551695
+24,ZAF,South Africa,Pretoria,Africa,1221037
+25,ITA,Italy,Rome,Europe,301336
+26,MMR,Myanmar,Nay Pyi Taw,Asia,676578
+27,KEN,Kenya,Nairobi,Africa,580367
+28,COL,Colombia,Bogota,South America,1141748
+29,KOR,South Korea,Seoul,Asia,100210
+30,ESP,Spain,Madrid,Europe,505992
+31,UGA,Uganda,Kampala,Africa,241550
+32,SDN,Sudan,Khartoum,Africa,1886068
+33,ARG,Argentina,Buenos Aires,South America,2780400
+34,DZA,Algeria,Algiers,Africa,2381741
+35,IRQ,Iraq,Baghdad,Asia,438317
+36,AFG,Afghanistan,Kabul,Asia,652230
+37,POL,Poland,Warsaw,Europe,312679
+38,UKR,Ukraine,Kiev,Europe,603500
+39,CAN,Canada,Ottawa,North America,9984670
+40,MAR,Morocco,Rabat,Africa,446550
+41,SAU,Saudi Arabia,Riyadh,Asia,2149690
+42,AGO,Angola,Luanda,Africa,1246700
+43,UZB,Uzbekistan,Tashkent,Asia,447400
+44,PER,Peru,Lima,South America,1285216
+45,MYS,Malaysia,Kuala Lumpur,Asia,330803
+46,YEM,Yemen,Sanaa,Asia,527968
+47,GHA,Ghana,Accra,Africa,238533
+48,MOZ,Mozambique,Maputo,Africa,801590
+49,NPL,Nepal,Kathmandu,Asia,147181
+50,MDG,Madagascar,Antananarivo,Africa,587041
+51,VEN,Venezuela,Caracas,South America,916445
+52,CIV,Ivory Coast,Yamoussoukro,Africa,322463
+53,CMR,Cameroon,Yaounde,Africa,475442
+54,NER,Niger,Niamey,Africa,1267000
+55,AUS,Australia,Canberra,Oceania,7692024
+56,PRK,North Korea,Pyongyang,Asia,120538
+57,TWN,Taiwan,Taipei,Asia,36193
+58,BFA,Burkina Faso,Ouagadougou,Africa,272967
+59,MLI,Mali,Bamako,Africa,1240192
+60,SYR,Syria,Damascus,Asia,185180
+61,LKA,Sri Lanka,Colombo,Asia,65610
+62,MWI,Malawi,Lilongwe,Africa,118484
+63,ZMB,Zambia,Lusaka,Africa,752612
+64,ROU,Romania,Bucharest,Europe,238391
+65,CHL,Chile,Santiago,South America,756102
+66,KAZ,Kazakhstan,Nursultan,Asia,2724900
+67,ECU,Ecuador,Quito,South America,276841
+68,GTM,Guatemala,Guatemala City,North America,108889
+69,TCD,Chad,N'Djamena,Africa,1284000
+70,SOM,Somalia,Mogadishu,Africa,637657
+71,NLD,Netherlands,Amsterdam,Europe,41850
+72,SEN,Senegal,Dakar,Africa,196722
+73,KHM,Cambodia,Phnom Penh,Asia,181035
+74,ZWE,Zimbabwe,Harare,Africa,390757
+75,GIN,Guinea,Conakry,Africa,245857
+76,RWA,Rwanda,Kigali,Africa,26338
+77,BEN,Benin,Porto-Novo,Africa,112622
+78,BDI,Burundi,Bujumbura,Africa,27834
+79,TUN,Tunisia,Tunis,Africa,163610
+80,BOL,Bolivia,Sucre,South America,1098581
+81,BEL,Belgium,Brussels,Europe,30528
+82,HTI,Haiti,Port-au-Prince,North America,27750
+83,JOR,Jordan,Amman,Asia,89342
+84,DOM,Dominican Republic,Santo Domingo,North America,48671
+85,CUB,Cuba,Havana,North America,109884
+86,SSD,South Sudan,Juba,Africa,619745
+87,SWE,Sweden,Stockholm,Europe,450295
+88,CZE,Czech Republic,Prague,Europe,78865
+89,HND,Honduras,Tegucigalpa,North America,112492
+90,GRC,Greece,Athens,Europe,131990
+91,AZE,Azerbaijan,Baku,Asia,86600
+92,PRT,Portugal,Lisbon,Europe,92090
+93,PNG,Papua New Guinea,Port Moresby,Oceania,462840
+94,HUN,Hungary,Budapest,Europe,93028
+95,TJK,Tajikistan,Dushanbe,Asia,143100
+96,BLR,Belarus,Minsk,Europe,207600
+97,ARE,United Arab Emirates,Abu Dhabi,Asia,83600
+98,ISR,Israel,Jerusalem,Asia,20770
+99,AUT,Austria,Vienna,Europe,83871
+100,TGO,Togo,Lome,Africa,56785
+101,CHE,Switzerland,Bern,Europe,41284
+102,SLE,Sierra Leone,Freetown,Africa,71740
+103,LAO,Laos,Vientiane,Asia,236800
+104,HKG,Hong Kong,Hong Kong,Asia,1104
+105,SRB,Serbia,Belgrade,Europe,88361
+106,NIC,Nicaragua,Managua,North America,130373
+107,LBY,Libya,Tripoli,Africa,1759540
+108,BGR,Bulgaria,Sofia,Europe,110879
+109,PRY,Paraguay,Asuncion,South America,406752
+110,KGZ,Kyrgyzstan,Bishkek,Asia,199951
+111,TKM,Turkmenistan,Ashgabat,Asia,488100
+112,SLV,El Salvador,San Salvador,North America,21041
+113,SGP,Singapore,Singapore,Asia,710
+114,COG,Republic of the Congo,Brazzaville,Africa,342000
+115,DNK,Denmark,Copenhagen,Europe,43094
+116,SVK,Slovakia,Bratislava,Europe,49037
+117,CAF,Central African Republic,Bangui,Africa,622984
+118,FIN,Finland,Helsinki,Europe,338424
+119,LBN,Lebanon,Beirut,Asia,10452
+120,NOR,Norway,Oslo,Europe,323802
+121,LBR,Liberia,Monrovia,Africa,111369
+122,PSE,Palestine,Ramallah,Asia,6220
+123,NZL,New Zealand,Wellington,Oceania,270467
+124,CRI,Costa Rica,San Jose,North America,51100
+125,IRL,Ireland,Dublin,Europe,70273
+126,MRT,Mauritania,Nouakchott,Africa,1030700
+127,OMN,Oman,Muscat,Asia,309500
+128,PAN,Panama,Panama City,North America,75417
+129,KWT,Kuwait,Kuwait City,Asia,17818
+130,HRV,Croatia,Zagreb,Europe,56594
+131,GEO,Georgia,Tbilisi,Asia,69700
+132,ERI,Eritrea,Asmara,Africa,117600
+133,URY,Uruguay,Montevideo,South America,181034
+134,MNG,Mongolia,Ulaanbaatar,Asia,1564110
+135,MDA,Moldova,Chisinau,Europe,33846
+136,PRI,Puerto Rico,San Juan,North America,8870
+137,BIH,Bosnia and Herzegovina,Sarajevo,Europe,51209
+138,ALB,Albania,Tirana,Europe,28748
+139,JAM,Jamaica,Kingston,North America,10991
+140,ARM,Armenia,Yerevan,Asia,29743
+141,LTU,Lithuania,Vilnius,Europe,65300
+142,GMB,Gambia,Banjul,Africa,10689
+143,QAT,Qatar,Doha,Asia,11586
+144,BWA,Botswana,Gaborone,Africa,582000
+145,NAM,Namibia,Windhoek,Africa,825615
+146,GAB,Gabon,Libreville,Africa,267668
+147,LSO,Lesotho,Maseru,Africa,30355
+148,SVN,Slovenia,Ljubljana,Europe,20273
+149,GNB,Guinea-Bissau,Bissau,Africa,36125
+150,MKD,North Macedonia,Skopje,Europe,25713
+151,LVA,Latvia,Riga,Europe,64559
+152,GNQ,Equatorial Guinea,Malabo,Africa,28051
+153,TTO,Trinidad and Tobago,Port-of-Spain,North America,5130
+154,BHR,Bahrain,Manama,Asia,765
+155,TLS,Timor-Leste,Dili,Asia,14874
+156,EST,Estonia,Tallinn,Europe,45227
+157,MUS,Mauritius,Port Louis,Africa,2040
+158,CYP,Cyprus,Nicosia,Europe,9251
+159,SWZ,Eswatini,Mbabane,Africa,17364
+160,DJI,Djibouti,Djibouti,Africa,23200
+161,REU,Reunion,Saint-Denis,Africa,2511
+162,FJI,Fiji,Suva,Oceania,18272
+163,COM,Comoros,Moroni,Africa,1862
+164,GUY,Guyana,Georgetown,South America,214969
+165,BTN,Bhutan,Thimphu,Asia,38394
+166,SLB,Solomon Islands,Honiara,Oceania,28896
+167,MAC,Macau,Concelho de Macau,Asia,30
+168,LUX,Luxembourg,Luxembourg,Europe,2586
+169,MNE,Montenegro,Podgorica,Europe,13812
+170,SUR,Suriname,Paramaribo,South America,163820
+171,CPV,Cape Verde,Praia,Africa,4033
+172,ESH,Western Sahara,El Aaiun,Africa,266000
+173,MLT,Malta,Valletta,Europe,316
+174,MDV,Maldives,Male,Asia,300
+175,BRN,Brunei,Bandar Seri Begawan,Asia,5765
+176,BHS,Bahamas,Nassau,North America,13943
+177,BLZ,Belize,Belmopan,North America,22966
+178,GLP,Guadeloupe,Basse-Terre,North America,1628
+179,ISL,Iceland,Reykjavik,Europe,103000
+180,MTQ,Martinique,Fort-de-France,North America,1128
+181,VUT,Vanuatu,Port-Vila,Oceania,12189
+182,MYT,Mayotte,Mamoudzou,Africa,374
+183,PYF,French Polynesia,Papeete,Oceania,4167
+184,GUF,French Guiana,Cayenne,South America,83534
+185,NCL,New Caledonia,Noumea,Oceania,18575
+186,BRB,Barbados,Bridgetown,North America,430
+187,STP,Sao Tome and Principe,Sao Tome,Africa,964
+188,WSM,Samoa,Apia,Oceania,2842
+189,CUW,Curacao,Willemstad,North America,444
+190,LCA,Saint Lucia,Castries,North America,616
+191,GUM,Guam,Hagatna,Oceania,549
+192,KIR,Kiribati,Tarawa,Oceania,811
+193,GRD,Grenada,Saint George's,North America,344
+194,FSM,Micronesia,Palikir,Oceania,702
+195,JEY,Jersey,Saint Helier,Europe,116
+196,SYC,Seychelles,Victoria,Africa,452
+197,TON,Tonga,Nuku  alofa,Oceania,747
+198,ABW,Aruba,Oranjestad,North America,180
+199,VCT,Saint Vincent and the Grenadines,Kingstown,North America,389
+200,VIR,United States Virgin Islands,Charlotte Amalie,North America,347
+201,ATG,Antigua and Barbuda,Saint John  s,North America,442
+202,IMN,Isle of Man,Douglas,Europe,572
+203,AND,Andorra,Andorra la Vella,Europe,468
+204,DMA,Dominica,Roseau,North America,751
+205,CYM,Cayman Islands,George Town,North America,264
+206,BMU,Bermuda,Hamilton,North America,54
+207,GGY,Guernsey,Saint Peter Port,Europe,78
+208,GRL,Greenland,Nuuk,North America,2166086
+209,FRO,Faroe Islands,Torshavn,Europe,1393
+210,NFK,Northern Mariana Islands,Saipan,Oceania,464
+211,KNA,Saint Kitts and Nevis,Basseterre,North America,261
+212,TCA,Turks and Caicos Islands,Cockburn Town,North America,948
+213,ASM,American Samoa,Pago Pago,Oceania,199
+214,SXM,Sint Maarten,Philipsburg,North America,34
+215,MHL,Marshall Islands,Majuro,Oceania,181
+216,LIE,Liechtenstein,Vaduz,Europe,160
+217,MCO,Monaco,Monaco,Europe,2
+218,SMR,San Marino,San Marino,Europe,61
+219,GIB,Gibraltar,Gibraltar,Europe,6
+220,MAF,Saint Martin,Marigot,North America,53
+221,VGB,British Virgin Islands,Road Town,North America,151
+222,PLW,Palau,Ngerulmud,Oceania,459
+223,COK,Cook Islands,Avarua,Oceania,236
+224,AIA,Anguilla,The Valley,North America,91
+225,NRU,Nauru,Yaren,Oceania,21
+226,WLF,Wallis and Futuna,Mata-Utu,Oceania,142
+227,TUV,Tuvalu,Funafuti,Oceania,26
+228,BLM,Saint Barthelemy,Gustavia,North America,21
+229,SPM,Saint Pierre and Miquelon,Saint-Pierre,North America,242
+230,MSR,Montserrat,Brades,North America,102
+231,FLK,Falkland Islands,Stanley,South America,12173
+232,NIU,Niue,Alofi,Oceania,260
+233,TKL,Tokelau,Nukunonu,Oceania,12
+234,VAT,Vatican City,Vatican City,Europe,1
