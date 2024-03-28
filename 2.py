@@ -7,7 +7,7 @@ pd.options.display.max_columns = None
 pd.options.display.max_rows = None
 
 def loadfile(my_dataframe):
-    filename = input("Please enter a file name(enter quit leave):") 
+    filename = input("Please enter a file name(enter quit leave): ") 
     if(filename == "quit"):
         return  None, False
     try:
@@ -173,7 +173,7 @@ def project(my_dataframe):
             print("Current keep column: ")
             for tmp in remain:
                 print(tmp)
-            print("******************************************************\n")
+            print("********************************************************\n")
 
         print("[0]: Finish")
         for c in column: # show colume
@@ -205,13 +205,31 @@ def project(my_dataframe):
     # delete all, except remain
     my_dataframe = my_dataframe.drop(my_dataframe.columns.difference(remain), axis=1)
 
+    # delete repeat data
+    my_dataframe = my_dataframe.drop_duplicates(subset=None, keep='first', inplace=False) # keep first appear otherwise all of the duplicate data will be delete
+    my_dataframe.reset_index(drop = True, inplace = True)
+
     return my_dataframe
 
 # Rename
-def project(my_dataframe):
+def Rename(my_dataframe):
     df = pd.DataFrame()
-    
+
+
 # Cartesian Product
+def Cartesian_Product(my_dataframe):
+    df = pd.DataFrame()
+    df, success= loadfile(df)
+    if success:
+        # df = pd.concat([my_dataframe, df])
+        my_dataframe = my_dataframe.merge(df, how = 'cross')
+        # print("********************DF********************")
+        # print(my_dataframe)
+        return my_dataframe
+    else:
+        print("### Fail to add a new file! ###")
+        return my_dataframe
+    
 
 # Set Union(聯集)
 def union(my_dataframe):
@@ -361,7 +379,7 @@ def main():
         elif(command == 2):
             if(file_Exist):
                 out_dataframe = select_data(my_dataframe)
-                print("———————————————————————————————————END Select————————————————————————————————————")
+                print("—————————————————————————————————— END Select ———————————————————————————————————")
                 print(out_dataframe)
                 print("—————————————————————————————————————————————————————————————————————————————————")
             else:
@@ -369,7 +387,7 @@ def main():
         elif(command == 3):
             if(file_Exist):
                 out_dataframe = project(my_dataframe)
-                print("——————————————————————————————————END Project————————————————————————————————————")
+                print("————————————————————————————————— END Project ———————————————————————————————————")
                 print(out_dataframe)
                 print("—————————————————————————————————————————————————————————————————————————————————")
             else:
@@ -380,11 +398,14 @@ def main():
                 # out_dataframe = select_data(my_dataframe)
             # else:
                 print("### Please Load file first!! ###\n")
-            '''elif(command == 5):
+        elif(command == 5):
             if(file_Exist):
-                # out_dataframe = select_data(my_dataframe)
-            # else:
-                print("### Please Load file first!! ###\n")'''
+                out_dataframe = Cartesian_Product(my_dataframe)
+                print("————————————————————————————— END Cartesian_Product —————————————————————————————")
+                print(out_dataframe)
+                print("—————————————————————————————————————————————————————————————————————————————————")
+            else:
+                print("### Please Load file first!! ###\n")
 
         elif(command == 6):
             if(file_Exist):
