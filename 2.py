@@ -1,15 +1,20 @@
 import pandas as pd
-import os
-print(os.getcwd())
+import time
+import os # judge file exist or not
+
+# print(os.getcwd())
+pd.options.display.max_columns = None
+pd.options.display.max_rows = None
 
 def loadfile(my_dataframe):
-    filename = input("Please enter a file name(enter exist leave):") 
-    if(filename == "exist"):
-        return  my_dataframe, False
+    filename = input("Please enter a file name(enter quit leave):") 
+    if(filename == "quit"):
+        return  None, False
     try:
         # my_dataframe = pd.read_csv("C:\\Users\\user\\OneDrive\\桌面\\course\\Database Systems\\Database-Systems_midterm\\"+filename+".csv")
-        my_dataframe = pd.read_csv(filename+".csv")
+        my_dataframe = pd.read_csv(filename+".csv", thousands=',')
         print(filename+'.csv-success!!')
+        print(my_dataframe)
         return my_dataframe, True
     except FileNotFoundError:
         print("### Don't exist this file!! ###\n")
@@ -23,17 +28,18 @@ def loadfile(my_dataframe):
 
 # select
 def select_data(my_dataframe):
-    # print(my_dataframe)
-    index = 1
     column = my_dataframe.columns
-    for c in column:
-        print("[",index,"]: ",c,sep="",end="\n")
-        index=index+1
-    # select_column=input("Please enter a number:")
     while True:
+        index = 1
+        for c in column:
+            print("[",index,"]: ",c,sep="",end="\n")
+            index=index+1
         try:
             select_column=int(input("Please enter a number:"))
-            break
+            if (select_column <= 0 or select_column > index-1) :
+                print("### Illegal input! ###\n")
+            else:
+                break
         except ValueError:
             print("### Illegal input! ###\n")
     
@@ -45,74 +51,197 @@ def select_data(my_dataframe):
         print("### Don't exist this column!! ###\n")
         select_data(my_dataframe)
     else:
-        print("————————————————————————")
-        print("│1.Select bigger data  │")
-        print("│2.Select equal data   │")
-        print("│3.Select smaller data │")
-        print("————————————————————————")
+        print("————————————————————————————————")
+        print("│0.Quit                         │") # >
+        print("│1.Select greater data          │") # >
+        print("│2.Select greater or equal data │") # >=
+        print("│3.Select equal data            │") # ==
+        print("│4.Select not equal data        │") # !=
+        print("│5.Select smaller or equal data │") # <=
+        print("│6.Select smaller data          │") # <
+        print("————————————————————————————————")
         
         while True:
             try:
                 command=int(input("Please enter a number:"))
-                if command < 1 or command > 3:
-                    print("###Please enter 1-3! ###\n")
+                if (command < 0 or command > 6):
+                    print("###Please enter 1-6! ###\n")
                 else:
                     break
             except ValueError:
                 print("### Illegal input! ###\n")
-        if(command == 1): # error input string
+        if(command == 0):
+            return None
+        elif(command == 1): # >
             while True:
                 try:
-                    
                     value=int(input("Please enter the value(int):"))
                     if(my_dataframe[column_name].dtype != "int64"):
                         print("### Illegal input! ###")
-                        print("### Make sure the datatype is correct! ###")
-                        select_data(my_dataframe)
+                        print("### Make sure the datatype is correct! ###\n")
+                        return select_data(my_dataframe)
                     else:
                         break
                 except ValueError:
-                    print("### Illegal input! ###\n")
-                    
-            # try:
-            #     int(my_dataframe[column_name])
-            # except ValueError:  
-            #     print("### Illegal input! ###\n")
-            return my_dataframe[my_dataframe[column_name] > value]
-        elif(command == 2):
-            while True:
-                try:
-                    value=input("Please enter the value:")
-                    break
-                except ValueError:
                     print("### Illegal input! ###")
-                    print("### Illegal input! ###\n")
-            return my_dataframe[my_dataframe[column_name] == value]
-        elif(command == 3):
+                    print("### You need to input a number! ###\n")
+            my_dataframe = my_dataframe[my_dataframe[column_name] > value]
+            my_dataframe.reset_index(drop = True, inplace = True)
+            return my_dataframe
+        
+        if(command == 1): # >=
             while True:
                 try:
                     value=int(input("Please enter the value(int):"))
+                    if(my_dataframe[column_name].dtype != "int64"):
+                        print("### Illegal input! ###")
+                        print("### Make sure the datatype is correct! ###\n")
+                        return select_data(my_dataframe)
+                    else:
+                        break
+                except ValueError:
+                    print("### Illegal input! ###")
+                    print("### You need to input a number! ###\n")
+            my_dataframe = my_dataframe[my_dataframe[column_name] >= value]
+            my_dataframe.reset_index(drop = True, inplace = True)
+            return my_dataframe
+        
+        elif(command == 3): # ==
+            while True:
+                try:
+                    value=input("Please enter the value(str):")
                     break
                 except ValueError:
                     print("### Illegal input! ###")
-                    print("### Illegal input! ###\n")
-            # try:
-            #     int(my_dataframe[column_name])
-            # except ValueError:  
-            #     print("### Illegal input! ###\n")
-            return my_dataframe[my_dataframe[column_name] < value]
-    
-
+                    print("### You need to input a string! ###\n")
+            my_dataframe = my_dataframe[my_dataframe[column_name] == value]
+            my_dataframe.reset_index(drop = True, inplace = True)
+            return my_dataframe
+        
+        elif(command == 4): # !=
+            while True:
+                try:
+                    value=input("Please enter the value(str):")
+                    break
+                except ValueError:
+                    print("### Illegal input! ###")
+                    print("### You need to input a string! ###\n")
+            my_dataframe = my_dataframe[my_dataframe[column_name] != value]
+            my_dataframe.reset_index(drop = True, inplace = True)
+            return my_dataframe
+        
+        elif(command == 5): # <=
+            while True:
+                try:
+                    value=int(input("Please enter the value(int):"))
+                    if(my_dataframe[column_name].dtype != "int64"):
+                        print("### Illegal input! ###")
+                        print("### Make sure the datatype is correct! ###\n")
+                        return select_data(my_dataframe)
+                    break
+                except ValueError:
+                    print("### Illegal input! ###")
+                    print("### You need to input a number! ###\n")
+            my_dataframe = my_dataframe[my_dataframe[column_name] <= value]
+            my_dataframe.reset_index(drop = True, inplace = True)
+            return my_dataframe
+        
+        elif(command == 6): # <
+            while True:
+                try:
+                    value=int(input("Please enter the value(int):"))
+                    if(my_dataframe[column_name].dtype != "int64"):
+                        print("### Illegal input! ###")
+                        print("### Make sure the datatype is correct! ###\n")
+                        return select_data(my_dataframe)
+                    break
+                except ValueError:
+                    print("### Illegal input! ###")
+                    print("### You need to input a number! ###\n")
+            my_dataframe = my_dataframe[my_dataframe[column_name] < value]
+            my_dataframe.reset_index(drop = True, inplace = True)
+            return my_dataframe
+            
 # Project
+def project(my_dataframe):
+    column = my_dataframe.columns
+    remain=[]
+    while True:
+        index = 1
+        if len(remain)!=0:
+            print("***************** Current keep column: *****************")
+            print("Current keep column: ")
+            for tmp in remain:
+                print(tmp)
+            print("******************************************************\n")
+
+        print("[0]: Finish")
+        for c in column: # show colume
+            print("[",index,"]: ",c,sep="",end="\n")
+            index=index+1
+        try:
+            select_column=int(input("Please enter a number: "))
+            if select_column == 0: # quit
+                break
+            elif (select_column <= 0 or select_column > index-1) :
+                print("### Illegal input! ###\n")
+            else: # append remain column
+                same_Column = False
+                for tmp in remain:
+                    if column[select_column-1] == tmp:
+                        same_Column = True
+                        break
+                if same_Column == False :
+                    remain.append(column[select_column-1])
+                        
+        except ValueError:
+            print("### Illegal input! ###\n")
+    
+    # if len(remain)==0:
+    #     return None
+    # add specific columns
+    # df = my_dataframe.loc[:, remain]
+
+    # delete all, except remain
+    my_dataframe = my_dataframe.drop(my_dataframe.columns.difference(remain), axis=1)
+
+    return my_dataframe
 
 # Rename
-
+def project(my_dataframe):
+    df = pd.DataFrame()
+    
 # Cartesian Product
 
 # Set Union(聯集)
+def union(my_dataframe):
+    df = pd.DataFrame()
+    df, success= loadfile(df)
+    if success:
+        # df = pd.concat([my_dataframe, df])
+        df = my_dataframe.merge(df)
+        print("********************DF********************")
+        print(df)
+        return df
+    else:
+        print("### Fail to add a new file! ###")
+        return my_dataframe
+
 
 # Set Difference(差集)
-
+def difference_data(my_dataframe):
+    df = pd.DataFrame()
+    df, success= loadfile(df)
+    if success:
+        # df = pd.concat([my_dataframe, df])
+        df = my_dataframe.merge(df)
+        print("********************DF********************")
+        print(df)
+        return df
+    else:
+        print("### Fail to add a new file! ###")
+        return my_dataframe
+    
 # Set insersection()
 
 # Division(除法)
@@ -121,8 +250,31 @@ def select_data(my_dataframe):
 
 
 def writefile(out_dataframe):
-    filename = input("Please enter a file name:")
-    out_dataframe.to_csv(filename+".csv")
+    while(True):
+        filename = input("Please enter a file name(Enter quit to leave):")
+        if(filename == 'quit'):
+            return
+        fileName_Exist = os.path.isfile(filename+'.csv')
+        # print(fileName_Exist)
+        while(fileName_Exist):
+            command = input("Already have this filename, do you want to continue?(Y/N): ")
+            if(command == 'Y' or command == 'y' or command == 'YES' or command == 'yes'):
+                fileName_Exist = False
+            elif(command == 'N' or command == 'n' or command == 'NO' or command == 'no'):
+                print("### Go back to the previous step ###\n")
+                break
+            else:
+                print("### Illegal input! ###\n")
+        
+        if(fileName_Exist == False):
+            try:
+                out_dataframe.to_csv(filename+".csv", index =  False)
+                print(filename+'.csv-success!!\n')
+                return
+            except FileExistsError:
+                print("### FileExists Error! ###\n")
+            except:
+                print("### Unexcepted Error! ###\n")
 
 def operationlist():
     print("————————————————————————————————————————")
@@ -144,6 +296,7 @@ def Quit():
     print("————————————————————————————————————————")
     print("|    Thank you using this program      |")
     print("——————————————————END———————————————————\n")
+    time.sleep(5)
     return False
 
 def Test(my_dataframe):
@@ -194,7 +347,7 @@ def main():
         operationlist() # operation menu
         while True: # Enter the command
             try:
-                command=int(input("Please enter the command:"))
+                command=int(input("Please enter the command: "))
                 break
             except ValueError:
                 print("### Illegal input! ###\n")
@@ -203,23 +356,61 @@ def main():
             running = Quit()
         elif(command == 1):
                 my_dataframe, file_Exist = loadfile(my_dataframe)
-                print(my_dataframe)
+                # print(my_dataframe)
+
         elif(command == 2):
             if(file_Exist):
                 out_dataframe = select_data(my_dataframe)
-                print("******************************************************")
+                print("———————————————————————————————————END Select————————————————————————————————————")
                 print(out_dataframe)
-                print("******************************************************")
+                print("—————————————————————————————————————————————————————————————————————————————————")
             else:
                 print("### Please Load file first!! ###\n")
         elif(command == 3):
             if(file_Exist):
+                out_dataframe = project(my_dataframe)
+                print("——————————————————————————————————END Project————————————————————————————————————")
+                print(out_dataframe)
+                print("—————————————————————————————————————————————————————————————————————————————————")
+            else:
+                print("### Please Load file first!! ###\n")
+
+        elif(command == 4):
+            if(file_Exist):
                 # out_dataframe = select_data(my_dataframe)
             # else:
                 print("### Please Load file first!! ###\n")
+            '''elif(command == 5):
+            if(file_Exist):
+                # out_dataframe = select_data(my_dataframe)
+            # else:
+                print("### Please Load file first!! ###\n")'''
 
-
-
+        elif(command == 6):
+            if(file_Exist):
+                out_dataframe = union(my_dataframe)
+            else:
+                print("### Please Load file first!! ###\n")
+        elif(command == 7):
+            if(file_Exist):
+                out_dataframe = difference_data(my_dataframe)
+            else:
+                print("### Please Load file first!! ###\n")
+            '''elif(command == 8):
+            if(file_Exist):
+                # out_dataframe = select_data(my_dataframe)
+            # else:
+                print("### Please Load file first!! ###\n")
+        elif(command == 9):
+            if(file_Exist):
+                # out_dataframe = select_data(my_dataframe)
+            # else:
+                print("### Please Load file first!! ###\n")
+        elif(command == 10):
+            if(file_Exist):
+                # out_dataframe = select_data(my_dataframe)
+            # else:
+                print("### Please Load file first!! ###\n")'''
 
         elif(command == 11):
             if(file_Exist):
