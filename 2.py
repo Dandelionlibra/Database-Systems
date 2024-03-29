@@ -252,16 +252,27 @@ def difference_data(my_dataframe):
     df, success= loadfile(df)
     if success:
         # df = pd.concat([my_dataframe, df])
-        df = my_dataframe.merge(df)
-        print("********************DF********************")
-        print(df)
+        df = pd.concat([my_dataframe, df, df]).drop_duplicates(keep = False)
+        # df = pd.concat([my_dataframe, df]).drop_duplicates(keep = False) # get exclusive
+
         return df
     else:
         print("### Fail to add a new file! ###")
         return my_dataframe
     
-# Set insersection()
-
+# Set insersection(交集)
+def insersection(my_dataframe):
+    df = pd.DataFrame()
+    df, success= loadfile(df)
+    if success:
+        # df = pd.concat([my_dataframe, df])
+        df = my_dataframe.merge(df)
+        
+        return df
+    else:
+        print("### Fail to add a new file! ###")
+        return my_dataframe
+    
 # Division(除法)
 
 # Natural join(合併)
@@ -287,7 +298,7 @@ def writefile(out_dataframe):
         if(fileName_Exist == False):
             try:
                 out_dataframe.to_csv(filename+".csv", index =  False)
-                print(filename+'.csv-success!!\n')
+                print('success created '+filename+'.csv-!!\n', sep='')
                 return
             except FileExistsError:
                 print("### FileExists Error! ###\n")
@@ -401,7 +412,7 @@ def main():
         elif(command == 5):
             if(file_Exist):
                 out_dataframe = Cartesian_Product(my_dataframe)
-                print("————————————————————————————— END Cartesian_Product —————————————————————————————")
+                print("———————————————————————————————— End Difference —————————————————————————————————")
                 print(out_dataframe)
                 print("—————————————————————————————————————————————————————————————————————————————————")
             else:
@@ -415,17 +426,23 @@ def main():
         elif(command == 7):
             if(file_Exist):
                 out_dataframe = difference_data(my_dataframe)
+                print("————————————————————————————— END Cartesian_Product —————————————————————————————")
+                print(out_dataframe)
+                print("—————————————————————————————————————————————————————————————————————————————————")
             else:
                 print("### Please Load file first!! ###\n")
-            '''elif(command == 8):
+        elif(command == 8):
             if(file_Exist):
-                # out_dataframe = select_data(my_dataframe)
-            # else:
+                out_dataframe = insersection(my_dataframe)
+                print("——————————————————————————————— END insersection ————————————————————————————————")
+                print(out_dataframe)
+                print("—————————————————————————————————————————————————————————————————————————————————")
+            else:
                 print("### Please Load file first!! ###\n")
-        elif(command == 9):
+            '''elif(command == 9):
             if(file_Exist):
                 # out_dataframe = select_data(my_dataframe)
-            # else:
+            else:
                 print("### Please Load file first!! ###\n")
         elif(command == 10):
             if(file_Exist):
