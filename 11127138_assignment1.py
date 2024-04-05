@@ -3,8 +3,8 @@ import time
 import os # judge file exist or not
 
 # print(os.getcwd())
-pd.options.display.max_columns = None
-pd.options.display.max_rows = None
+# pd.options.display.max_columns = None
+# pd.options.display.max_rows = None
 
 
 def loadfile(my_dataframe):
@@ -432,7 +432,6 @@ def Cartesian_Product(my_dataframe):
         print("### Fail to add a new file! ###")
         return pd.DataFrame()
     
-
 # Set Union(聯集)
 def union(my_dataframe):
     df = pd.DataFrame()
@@ -455,7 +454,6 @@ drop_duplicates(subset, keep, inplace, ignore_index)
 ## ignore_index = True, clear index and reset it
 """
 
-
 # Set Difference(差集)
 def difference_data(my_dataframe):
     df = pd.DataFrame()
@@ -475,7 +473,6 @@ def insersection(my_dataframe):
     df = pd.DataFrame()
     df, success= loadfile(df)
     if success:
-        # df = pd.concat([my_dataframe, df])
         df = my_dataframe.merge(df)
         
         return df
@@ -504,59 +501,33 @@ def division(my_dataframe):
             if column not in common_columns:
                 remain_columns.append(column)
 
-        # for column in my_dataframe.columns:
-        copydata1 = my_dataframe # copy the data
-
-        # copydata2 = pd.DataFrame(columns=my_dataframe.columns) # copy the data
         tmp = pd.DataFrame(columns=my_dataframe.columns) # create a new dataframe, same columns as my_dataframe
         output = pd.DataFrame(columns=my_dataframe.columns) # create a new dataframe, same columns as my_dataframe
         for i, dtype in my_dataframe.dtypes.items(): # set the same datatype as my_dataframe
             output[i] = output[i].astype(dtype)
             tmp[i] = tmp[i].astype(dtype)
-
-        
-        # for i, dtype in df.dtypes.items(): # set the same datatype as my_dataframe
-        #     output[i] = output[i].astype(dtype)
-
-
+        copydata1 = my_dataframe # copy the data
         index_to_drop = []
         for idx1, row1 in my_dataframe.iterrows():
             for idx2, row2 in copydata1.iterrows():
-                
                 Same = True
                 for column in remain_columns:
                     if row1[column] != row2[column]:
                         Same = False
                         break
-                    
                 if Same:
                     index_to_drop.append(idx2)
                     tmp = pd.concat([tmp, pd.DataFrame([row2], columns=my_dataframe.columns)], ignore_index=True)
 
-            #     print("------------row2---------------")
-            #     print(row2)
-            #     print("------------tmp---------------")
-            #     print(tmp)
-            #     print("------------index_to_drop---------------")
-            #     print(index_to_drop)
-                
-            # print("tmp.size",tmp.size)
             if tmp.size > my_dataframe.shape[1] : # shape[1] = number of columns
-                output = compare(tmp, df, output)
+                output = compare(tmp, df, output) # check if the data as same as df or not, renew the output
 
-
+            # drop the data which is already checked
             copydata1.drop(index_to_drop, inplace=True)
             index_to_drop.clear()
             tmp.drop(tmp.index, inplace=True)
-            # tmp = pd.DataFrame(columns=my_dataframe.columns) # create a new dataframe, same columns as my_dataframe
-            # for i, dtype in my_dataframe.dtypes.items(): # set the same datatype as my_dataframe
-            #     tmp[i] = tmp[i].astype(dtype)
 
-            # print("------------copydata1---------------")
-            # print(copydata1)
-            # print("------------output---------------")
-            # print(output)
-
+        # drop the columns which is df.columns
         output = output.drop(df.columns, axis=1)
         return output
 
@@ -577,14 +548,8 @@ def compare(tmp, df, output):
                 break
         if Same:
             count += 1
-    # print("------------compare tmp.iloc[0]---------------")
-    # print(tmp.iloc[0])
-    # print("------------compare output---------------")
-    # print(output)
     if count == df.shape[0]: # shape[0] = number of rows
         output = pd.concat([output, tmp.iloc[[0]]], ignore_index=True)
-    # print("------------compare output---------------")
-    # print(output)
     return output
 
 
