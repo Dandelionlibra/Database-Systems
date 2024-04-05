@@ -217,61 +217,37 @@ def Rename(my_dataframe):
 
 
 # Cartesian Product
-def Cartesian_Product(my_dataframe):
-    df = pd.DataFrame()
-    df, success= loadfile(df)
-    if success:
-        # df = pd.concat([my_dataframe, df])
-        my_dataframe = my_dataframe.merge(df, how = 'cross')
-        # print("********************DF********************")
-        # print(my_dataframe)
-        return my_dataframe
-    else:
-        print("### Fail to add a new file! ###")
-        return my_dataframe
-    
+def Cartesian_Product(my_dataframe, df):
+    df = my_dataframe.merge(df, how = 'cross')
+    df = df.reset_index(drop = True, inplace = True)
+    return df
+
 
 # Set Union(聯集)
-def union(my_dataframe):
-    df = pd.DataFrame()
-    df, success= loadfile(df)
-    if success:
+def union(my_dataframe, df):
         # df = pd.concat([my_dataframe, df])
-        df = my_dataframe.merge(df)
-        print("********************DF********************")
-        print(df)
-        return df
-    else:
-        print("### Fail to add a new file! ###")
-        return my_dataframe
+    df = my_dataframe.merge(df)
+    print("********************DF********************")
+    print(df)
+    return df
 
 
 # Set Difference(差集)
-def difference_data(my_dataframe):
-    df = pd.DataFrame()
-    df, success= loadfile(df)
-    if success:
-        # df = pd.concat([my_dataframe, df])
-        df = pd.concat([my_dataframe, df, df]).drop_duplicates(keep = False)
-        # df = pd.concat([my_dataframe, df]).drop_duplicates(keep = False) # get exclusive
+def difference_data(my_dataframe, df):
+    print(df)
+    return pd.concat([my_dataframe, df, df]).drop_duplicates(keep = False)
+    
+    # df = pd.concat([my_dataframe, df]).drop_duplicates(keep = False) # get exclusive
+    
 
-        return df
-    else:
-        print("### Fail to add a new file! ###")
-        return my_dataframe
     
 # Set insersection(交集)
-def insersection(my_dataframe):
-    df = pd.DataFrame()
-    df, success= loadfile(df)
-    if success:
-        # df = pd.concat([my_dataframe, df])
-        df = my_dataframe.merge(df)
-        
-        return df
-    else:
-        print("### Fail to add a new file! ###")
-        return my_dataframe
+def insersection(my_dataframe, df):
+    df = my_dataframe.merge(df)
+    df = df.reset_index(drop = True, inplace = True)
+    
+    return df
+
     
 # Division(除法)
 
@@ -385,7 +361,6 @@ def main():
             running = Quit()
         elif(command == 1):
                 my_dataframe, file_Exist = loadfile(my_dataframe)
-                # print(my_dataframe)
 
         elif(command == 2):
             if(file_Exist):
@@ -406,37 +381,64 @@ def main():
 
         elif(command == 4):
             if(file_Exist):
-                # out_dataframe = select_data(my_dataframe)
+                # out_dataframe = rename_data(my_dataframe)
             # else:
                 print("### Please Load file first!! ###\n")
         elif(command == 5):
             if(file_Exist):
-                out_dataframe = Cartesian_Product(my_dataframe)
-                print("———————————————————————————————— End Difference —————————————————————————————————")
-                print(out_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                df = pd.DataFrame()
+                df, success= loadfile(df)
+                if success:
+                    out_dataframe = Cartesian_Product(my_dataframe, df)
+                    print("————————————————————————————— END Cartesian_Product —————————————————————————————")
+                    print(out_dataframe)
+                    print("—————————————————————————————————————————————————————————————————————————————————")
+                else:
+                    print("### Fail to add a new file! ###")
+                    
             else:
                 print("### Please Load file first!! ###\n")
 
         elif(command == 6):
             if(file_Exist):
-                out_dataframe = union(my_dataframe)
+                df = pd.DataFrame()
+                df, success= loadfile(df)
+                if success:
+                    out_dataframe = union(my_dataframe, df)
+                    print("————————————————————————————— END Union —————————————————————————————")
+                    print(out_dataframe)
+                    print("—————————————————————————————————————————————————————————————————————————————————")
+                else:
+                    print("### Fail to add a new file! ###")
             else:
                 print("### Please Load file first!! ###\n")
+
         elif(command == 7):
             if(file_Exist):
-                out_dataframe = difference_data(my_dataframe)
-                print("————————————————————————————— END Cartesian_Product —————————————————————————————")
-                print(out_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                df = pd.DataFrame()
+                df, success= loadfile(df)
+                if success:
+                    out_dataframe = difference_data(my_dataframe, df)
+                    out_dataframe = out_dataframe.reset_index(drop = True, inplace = True)
+                    print("———————————————————————————————— End Difference —————————————————————————————————")
+                    print(out_dataframe)
+                    print("—————————————————————————————————————————————————————————————————————————————————")
+
+                else:
+                    print("### Fail to add a new file! ###")
             else:
                 print("### Please Load file first!! ###\n")
         elif(command == 8):
             if(file_Exist):
-                out_dataframe = insersection(my_dataframe)
-                print("——————————————————————————————— END insersection ————————————————————————————————")
-                print(out_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                df = pd.DataFrame()
+                df, success= loadfile(df)
+                if success:
+                    out_dataframe = insersection(my_dataframe, df)
+                    print("——————————————————————————————— END insersection ————————————————————————————————")
+                    print(out_dataframe)
+                    print("—————————————————————————————————————————————————————————————————————————————————")
+                else:
+                    print("### Fail to add a new file! ###")
             else:
                 print("### Please Load file first!! ###\n")
             '''elif(command == 9):
@@ -455,11 +457,11 @@ def main():
                 writefile(out_dataframe)
             else:
                 print("### Please Load file first!! ###\n")
-        elif(command == 12):
-            if(file_Exist):
-                Test(my_dataframe)
-            else:
-                print("### Please Load file first!! ###\n")
+        # elif(command == 12):
+        #     if(file_Exist):
+        #         Test(my_dataframe)
+        #     else:
+        #         print("### Please Load file first!! ###\n")
         else:
             print("### The command doesn't exist !! ###\n")
         

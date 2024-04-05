@@ -1,0 +1,24 @@
+country_ch,country_en,cases,deaths,Name,NetWorth,Country,Source,Rank,Age,Industry
+美國,United States,102717337,1143992,Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail
+印度,India,44689072,530776,Bill Gates,$124 B,United States,Microsoft,4,65,Technology
+法國,France,39661650,165135,Mark Zuckerberg,$97 B,United States,Facebook,5,36,Technology
+德國,Germany,38241231,168808,Warren Buffett,$96 B,United States,Berkshire Hathaway,6,90,Finance & Investments
+俄羅斯,Russia,22388556,396463,Larry Ellison,$93 B,United States,software,7,76,Technology
+土耳其,Turkey,17042722,101492,Larry Page,$91.5 B,United States,Google,8,48,Technology
+西班牙,Spain,13770429,119479,Sergey Brin,$89 B,United States,Google,9,47,Technology
+越南,Vietnam,11527012,43186,Mukesh Ambani,$84.5 B,India,diversified,10,63,Diversified
+澳洲,Australia,11385534,19459,Amancio Ortega,$77 B,Spain,Zara,11,85,Fashion & Retail
+臺灣,Taiwan,10143788,18371,Francoise Bettencourt Meyers & family,$73.6 B,France,L'Oreal,12,67,Fashion & Retail
+阿根廷,Argentina,10044957,130472,Zhong Shanshan,$68.9 B,China,"beverages, pharmaceuticals",13,66,Food & Beverage
+荷蘭,Netherlands,8600120,22992,Steve Ballmer,$68.7 B,United States,Microsoft,14,65,Technology
+伊朗,Iran,7571996,144922,Ma Huateng,$65.8 B,China,internet media,15,49,Technology
+吐瓦魯,Tuvalu,2779,0,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom
+吐瓦魯,Tuvalu,2779,0,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail
+吐瓦魯,Tuvalu,2779,0,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail
+紐埃,Niue,747,0,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom
+紐埃,Niue,747,0,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail
+紐埃,Niue,747,0,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail
+國際運輸工具(鑽石公主號),Int'l conveyance (Japan),741,13,Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail
+教廷,Holy See,29,0,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom
+教廷,Holy See,29,0,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail
+教廷,Holy See,29,0,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail

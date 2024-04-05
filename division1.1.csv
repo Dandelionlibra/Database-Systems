@@ -1,0 +1,9 @@
+A,B,C,D,E
+a,a,a,a,1
+a,a,r,a,1
+a,a,r,b,1
+b,a,r,a,1
+b,a,r,b,3
+r,a,r,a,1
+r,a,r,b,1
+r,a,b,b,1

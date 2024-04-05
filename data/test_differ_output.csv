@@ -1,0 +1,171 @@
+Name_x,NetWorth_x,Country_x,Source_x,Rank_x,Age_x,Industry_x,Name_y,NetWorth_y,Country_y,Source_y,Rank_y,Age_y,Industry_y,deaths
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,1143992
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Bill Gates,$124 B,United States,Microsoft,4,65,Technology,530776
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Mark Zuckerberg,$97 B,United States,Facebook,5,36,Technology,165135
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Warren Buffett,$96 B,United States,Berkshire Hathaway,6,90,Finance & Investments,168808
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Larry Ellison,$93 B,United States,software,7,76,Technology,396463
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Larry Page,$91.5 B,United States,Google,8,48,Technology,101492
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Sergey Brin,$89 B,United States,Google,9,47,Technology,119479
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Mukesh Ambani,$84.5 B,India,diversified,10,63,Diversified,43186
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Amancio Ortega,$77 B,Spain,Zara,11,85,Fashion & Retail,19459
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Francoise Bettencourt Meyers & family,$73.6 B,France,L'Oreal,12,67,Fashion & Retail,18371
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Zhong Shanshan,$68.9 B,China,"beverages, pharmaceuticals",13,66,Food & Beverage,130472
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Steve Ballmer,$68.7 B,United States,Microsoft,14,65,Technology,22992
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Ma Huateng,$65.8 B,China,internet media,15,49,Technology,144922
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,0
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,0
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,13
+Jeff Bezos,$177 B,United States,Amazon,1,57,Technology,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,0
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,1143992
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Bill Gates,$124 B,United States,Microsoft,4,65,Technology,530776
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Mark Zuckerberg,$97 B,United States,Facebook,5,36,Technology,165135
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Warren Buffett,$96 B,United States,Berkshire Hathaway,6,90,Finance & Investments,168808
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Larry Ellison,$93 B,United States,software,7,76,Technology,396463
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Larry Page,$91.5 B,United States,Google,8,48,Technology,101492
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Sergey Brin,$89 B,United States,Google,9,47,Technology,119479
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Mukesh Ambani,$84.5 B,India,diversified,10,63,Diversified,43186
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Amancio Ortega,$77 B,Spain,Zara,11,85,Fashion & Retail,19459
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Francoise Bettencourt Meyers & family,$73.6 B,France,L'Oreal,12,67,Fashion & Retail,18371
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Zhong Shanshan,$68.9 B,China,"beverages, pharmaceuticals",13,66,Food & Beverage,130472
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Steve Ballmer,$68.7 B,United States,Microsoft,14,65,Technology,22992
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Ma Huateng,$65.8 B,China,internet media,15,49,Technology,144922
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,0
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,0
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,13
+Elon Musk,$151 B,United States,"Tesla, SpaceX",2,49,Automotive,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,0
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,1143992
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Bill Gates,$124 B,United States,Microsoft,4,65,Technology,530776
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Mark Zuckerberg,$97 B,United States,Facebook,5,36,Technology,165135
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Warren Buffett,$96 B,United States,Berkshire Hathaway,6,90,Finance & Investments,168808
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Larry Ellison,$93 B,United States,software,7,76,Technology,396463
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Larry Page,$91.5 B,United States,Google,8,48,Technology,101492
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Sergey Brin,$89 B,United States,Google,9,47,Technology,119479
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Mukesh Ambani,$84.5 B,India,diversified,10,63,Diversified,43186
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Amancio Ortega,$77 B,Spain,Zara,11,85,Fashion & Retail,19459
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Francoise Bettencourt Meyers & family,$73.6 B,France,L'Oreal,12,67,Fashion & Retail,18371
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Zhong Shanshan,$68.9 B,China,"beverages, pharmaceuticals",13,66,Food & Beverage,130472
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Steve Ballmer,$68.7 B,United States,Microsoft,14,65,Technology,22992
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Ma Huateng,$65.8 B,China,internet media,15,49,Technology,144922
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,0
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,0
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,13
+Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,0
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,1143992
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Bill Gates,$124 B,United States,Microsoft,4,65,Technology,530776
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Mark Zuckerberg,$97 B,United States,Facebook,5,36,Technology,165135
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Warren Buffett,$96 B,United States,Berkshire Hathaway,6,90,Finance & Investments,168808
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Larry Ellison,$93 B,United States,software,7,76,Technology,396463
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Larry Page,$91.5 B,United States,Google,8,48,Technology,101492
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Sergey Brin,$89 B,United States,Google,9,47,Technology,119479
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Mukesh Ambani,$84.5 B,India,diversified,10,63,Diversified,43186
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Amancio Ortega,$77 B,Spain,Zara,11,85,Fashion & Retail,19459
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Francoise Bettencourt Meyers & family,$73.6 B,France,L'Oreal,12,67,Fashion & Retail,18371
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Zhong Shanshan,$68.9 B,China,"beverages, pharmaceuticals",13,66,Food & Beverage,130472
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Steve Ballmer,$68.7 B,United States,Microsoft,14,65,Technology,22992
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Ma Huateng,$65.8 B,China,internet media,15,49,Technology,144922
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,0
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,0
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,13
+Bill Gates,$124 B,United States,Microsoft,4,65,Technology,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,0
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,1143992
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Bill Gates,$124 B,United States,Microsoft,4,65,Technology,530776
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Mark Zuckerberg,$97 B,United States,Facebook,5,36,Technology,165135
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Warren Buffett,$96 B,United States,Berkshire Hathaway,6,90,Finance & Investments,168808
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Larry Ellison,$93 B,United States,software,7,76,Technology,396463
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Larry Page,$91.5 B,United States,Google,8,48,Technology,101492
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Sergey Brin,$89 B,United States,Google,9,47,Technology,119479
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Mukesh Ambani,$84.5 B,India,diversified,10,63,Diversified,43186
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Amancio Ortega,$77 B,Spain,Zara,11,85,Fashion & Retail,19459
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Francoise Bettencourt Meyers & family,$73.6 B,France,L'Oreal,12,67,Fashion & Retail,18371
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Zhong Shanshan,$68.9 B,China,"beverages, pharmaceuticals",13,66,Food & Beverage,130472
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Steve Ballmer,$68.7 B,United States,Microsoft,14,65,Technology,22992
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Ma Huateng,$65.8 B,China,internet media,15,49,Technology,144922
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,0
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,0
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,13
+Ma Huateng,$65.8 B,China,internet media,15,49,Technology,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,0
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,1143992
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Bill Gates,$124 B,United States,Microsoft,4,65,Technology,530776
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Mark Zuckerberg,$97 B,United States,Facebook,5,36,Technology,165135
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Warren Buffett,$96 B,United States,Berkshire Hathaway,6,90,Finance & Investments,168808
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Larry Ellison,$93 B,United States,software,7,76,Technology,396463
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Larry Page,$91.5 B,United States,Google,8,48,Technology,101492
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Sergey Brin,$89 B,United States,Google,9,47,Technology,119479
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Mukesh Ambani,$84.5 B,India,diversified,10,63,Diversified,43186
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Amancio Ortega,$77 B,Spain,Zara,11,85,Fashion & Retail,19459
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Francoise Bettencourt Meyers & family,$73.6 B,France,L'Oreal,12,67,Fashion & Retail,18371
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Zhong Shanshan,$68.9 B,China,"beverages, pharmaceuticals",13,66,Food & Beverage,130472
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Steve Ballmer,$68.7 B,United States,Microsoft,14,65,Technology,22992
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Ma Huateng,$65.8 B,China,internet media,15,49,Technology,144922
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,0
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,0
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,13
+Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,0
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,1143992
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Bill Gates,$124 B,United States,Microsoft,4,65,Technology,530776
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Mark Zuckerberg,$97 B,United States,Facebook,5,36,Technology,165135
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Warren Buffett,$96 B,United States,Berkshire Hathaway,6,90,Finance & Investments,168808
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Larry Ellison,$93 B,United States,software,7,76,Technology,396463
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Larry Page,$91.5 B,United States,Google,8,48,Technology,101492
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Sergey Brin,$89 B,United States,Google,9,47,Technology,119479
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Mukesh Ambani,$84.5 B,India,diversified,10,63,Diversified,43186
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Amancio Ortega,$77 B,Spain,Zara,11,85,Fashion & Retail,19459
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Francoise Bettencourt Meyers & family,$73.6 B,France,L'Oreal,12,67,Fashion & Retail,18371
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Zhong Shanshan,$68.9 B,China,"beverages, pharmaceuticals",13,66,Food & Beverage,130472
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Steve Ballmer,$68.7 B,United States,Microsoft,14,65,Technology,22992
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Ma Huateng,$65.8 B,China,internet media,15,49,Technology,144922
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,0
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,0
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,13
+Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,0
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,1143992
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Bill Gates,$124 B,United States,Microsoft,4,65,Technology,530776
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Mark Zuckerberg,$97 B,United States,Facebook,5,36,Technology,165135
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Warren Buffett,$96 B,United States,Berkshire Hathaway,6,90,Finance & Investments,168808
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Larry Ellison,$93 B,United States,software,7,76,Technology,396463
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Larry Page,$91.5 B,United States,Google,8,48,Technology,101492
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Sergey Brin,$89 B,United States,Google,9,47,Technology,119479
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Mukesh Ambani,$84.5 B,India,diversified,10,63,Diversified,43186
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Amancio Ortega,$77 B,Spain,Zara,11,85,Fashion & Retail,19459
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Francoise Bettencourt Meyers & family,$73.6 B,France,L'Oreal,12,67,Fashion & Retail,18371
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Zhong Shanshan,$68.9 B,China,"beverages, pharmaceuticals",13,66,Food & Beverage,130472
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Steve Ballmer,$68.7 B,United States,Microsoft,14,65,Technology,22992
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Ma Huateng,$65.8 B,China,internet media,15,49,Technology,144922
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,0
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,0
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,13
+Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,0
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,1143992
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Bill Gates,$124 B,United States,Microsoft,4,65,Technology,530776
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Mark Zuckerberg,$97 B,United States,Facebook,5,36,Technology,165135
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Warren Buffett,$96 B,United States,Berkshire Hathaway,6,90,Finance & Investments,168808
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Larry Ellison,$93 B,United States,software,7,76,Technology,396463
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Larry Page,$91.5 B,United States,Google,8,48,Technology,101492
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Sergey Brin,$89 B,United States,Google,9,47,Technology,119479
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Mukesh Ambani,$84.5 B,India,diversified,10,63,Diversified,43186
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Amancio Ortega,$77 B,Spain,Zara,11,85,Fashion & Retail,19459
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Francoise Bettencourt Meyers & family,$73.6 B,France,L'Oreal,12,67,Fashion & Retail,18371
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Zhong Shanshan,$68.9 B,China,"beverages, pharmaceuticals",13,66,Food & Beverage,130472
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Steve Ballmer,$68.7 B,United States,Microsoft,14,65,Technology,22992
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Ma Huateng,$65.8 B,China,internet media,15,49,Technology,144922
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,0
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,0
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,13
+Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,0
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Bernard Arnault & family,$150 B,France,LVMH,3,72,Fashion & Retail,1143992
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Bill Gates,$124 B,United States,Microsoft,4,65,Technology,530776
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Mark Zuckerberg,$97 B,United States,Facebook,5,36,Technology,165135
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Warren Buffett,$96 B,United States,Berkshire Hathaway,6,90,Finance & Investments,168808
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Larry Ellison,$93 B,United States,software,7,76,Technology,396463
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Larry Page,$91.5 B,United States,Google,8,48,Technology,101492
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Sergey Brin,$89 B,United States,Google,9,47,Technology,119479
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Mukesh Ambani,$84.5 B,India,diversified,10,63,Diversified,43186
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Amancio Ortega,$77 B,Spain,Zara,11,85,Fashion & Retail,19459
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Francoise Bettencourt Meyers & family,$73.6 B,France,L'Oreal,12,67,Fashion & Retail,18371
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Zhong Shanshan,$68.9 B,China,"beverages, pharmaceuticals",13,66,Food & Beverage,130472
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Steve Ballmer,$68.7 B,United States,Microsoft,14,65,Technology,22992
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Ma Huateng,$65.8 B,China,internet media,15,49,Technology,144922
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Carlos Slim Helu & family,$62.8 B,Mexico,telecom,16,81,Telecom,0
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Alice Walton,$61.8 B,United States,Walmart,17,71,Fashion & Retail,0
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Jim Walton,$60.2 B,United States,Walmart,18,72,Fashion & Retail,13
+Michael Bloomberg,$59 B,United States,Bloomberg LP,20,79,Media & Entertainment,Rob Walton,$59.5 B,United States,Walmart,19,76,Fashion & Retail,0
