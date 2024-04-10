@@ -15,20 +15,21 @@ def loadfile(my_dataframe):
         # my_dataframe = pd.read_csv("C:\\Users\\user\\OneDrive\\桌面\\course\\Database Systems\\Database-Systems_midterm\\"+filename+".csv")
         my_dataframe = pd.read_csv(filename+".csv", thousands=',')
         if(my_dataframe.empty):
-            print("### This file no data!! ###\n")
+            print("\033[93m### This file no data!! ###\033[0m\n")
             return loadfile(my_dataframe)
         
-        print(filename+'.csv-success!!')
+        print("\033[93m"+filename+'.csv-success!!\033[0m')
         print(my_dataframe)
+        print()
         return my_dataframe, True
     except FileNotFoundError:
-        print("### Don't exist this file!! ###\n")
+        print("\033[91m### Don't exist this file!! ###\033[0m\n")
     except pd.errors.EmptyDataError:
-        print("### This file no data!! ###\n")
+        print("\033[91m### This file no data!! ###\033[0m\n")
     except pd.errors.ParserError:
-        print("### Parse error ###\n")
+        print("\033[91m### Parse error ###\033[0m\n")
     except Exception:
-        print("Some other exception")
+        print("\033[91mSome other exception\033[0m\n")
     return loadfile(my_dataframe)
 
 # select
@@ -45,19 +46,19 @@ def select_data(my_dataframe):
             if(select_column == 0):
                 return pd.DataFrame()
             if (select_column <= 0 or select_column > index-1) :
-                print("### Illegal input! ###\n")
+                print("\033[91m### Illegal input! ###\033[0m\n")
             else:
                 break
         except ValueError:
-            print("### Illegal input! ###\n")
+            print("\033[91m### Illegal input! ###\033[0m\n")
     
     column_name = column[select_column-1]
-    print("column_name:",column_name,", datatype:",my_dataframe[column_name].dtype)
+    print("\033[93mcolumn_name:",column_name,", datatype:",my_dataframe[column_name].dtype,"\033[0m")
 
 
     if column_name not in my_dataframe.columns:
-        print("### Don't exist this column!! ###\n")
-        select_data(my_dataframe)
+        print("\033[91m### Don't exist this column!! ###\033[0m\n")
+        return select_data(my_dataframe)
     else:
         commandnum = 0
         if(my_dataframe[column_name].dtype == "int64" or my_dataframe[column_name].dtype == "float64"): # the datatype is int so that can use >, >=, <=, < to compare
@@ -85,7 +86,7 @@ def select_data(my_dataframe):
             try:
                 command=int(input("Please enter a number: "))
                 if (command < 0 or command > commandnum):
-                    print("###Please enter 1-",commandnum,"! ###\n")
+                    print("\033[93m###Please enter 1-",commandnum,"! ###\033[0m\n")
                 else:
                     if(commandnum == 3):
                         if(command == 1):
@@ -96,7 +97,7 @@ def select_data(my_dataframe):
                             command = 7
                     break
             except ValueError:
-                print("### Illegal input! ###\n")
+                print("\033[91m### Illegal input! ###\033[0m\n")
         if(command == 0):
             return pd.DataFrame()
         elif(command == 1): # >
@@ -105,8 +106,8 @@ def select_data(my_dataframe):
                     value=int(input("Please enter the value(int): "))
                     break
                 except ValueError:
-                    print("### Illegal input! ###")
-                    print("### You need to input a number! ###\n")
+                    print("\033[91m### Illegal input! ###\033[0m")
+                    print("\033[91m### You need to input a number! ###\033[0m\n")
             my_dataframe = my_dataframe[my_dataframe[column_name] > value]
             my_dataframe.reset_index(drop = True, inplace = True)
             return my_dataframe
@@ -117,8 +118,8 @@ def select_data(my_dataframe):
                     value=int(input("Please enter the value(int): "))
                     break
                 except ValueError:
-                    print("### Illegal input! ###")
-                    print("### You need to input a number! ###\n")
+                    print("\033[91m### Illegal input! ###\033[0m")
+                    print("\033[91m### You need to input a number! ###\033[0m\n")
             my_dataframe = my_dataframe[my_dataframe[column_name] >= value]
             my_dataframe.reset_index(drop = True, inplace = True)
             return my_dataframe
@@ -129,8 +130,8 @@ def select_data(my_dataframe):
                     value=input("Please enter the value(str): ")
                     break
                 except ValueError:
-                    print("### Illegal input! ###")
-                    print("### You need to input a string! ###\n")
+                    print("\033[91m### Illegal input! ###\033[0m")
+                    print("\033[91m### You need to input a string! ###\033[0m\n")
             my_dataframe = my_dataframe[my_dataframe[column_name].apply(str) == value]
             my_dataframe.reset_index(drop = True, inplace = True)
             return my_dataframe
@@ -141,8 +142,8 @@ def select_data(my_dataframe):
                     value=input("Please enter the value(str): ")
                     break
                 except ValueError:
-                    print("### Illegal input! ###")
-                    print("### You need to input a string! ###\n")
+                    print("\033[91m### Illegal input! ###\033[0m")
+                    print("\033[91m### You need to input a string! ###\033[0m\n")
             my_dataframe = my_dataframe[my_dataframe[column_name].apply(str) != value]
             my_dataframe.reset_index(drop = True, inplace = True)
             return my_dataframe
@@ -153,8 +154,8 @@ def select_data(my_dataframe):
                     value=int(input("Please enter the value(int): "))
                     break
                 except ValueError:
-                    print("### Illegal input! ###")
-                    print("### You need to input a number! ###\n")
+                    print("\033[91m### Illegal input! ###\033[0m")
+                    print("\033[91m### You need to input a number! ###\033[0m\n")
             my_dataframe = my_dataframe[my_dataframe[column_name] <= value]
             my_dataframe.reset_index(drop = True, inplace = True)
             return my_dataframe
@@ -165,8 +166,8 @@ def select_data(my_dataframe):
                     value=int(input("Please enter the value(int): "))
                     break
                 except ValueError:
-                    print("### Illegal input! ###")
-                    print("### You need to input a number! ###\n")
+                    print("\033[91m### Illegal input! ###\033[0m")
+                    print("\033[91m### You need to input a number! ###\033[0m\n")
             my_dataframe = my_dataframe[my_dataframe[column_name] < value]
             my_dataframe.reset_index(drop = True, inplace = True)
             return my_dataframe
@@ -186,17 +187,17 @@ def select_data(my_dataframe):
                     if(select_column == 0):
                         return pd.DataFrame()
                     if (select_column <= 0 or select_column > index-1) :
-                        print("### Illegal input! ###\n")
+                        print("\033[91m### Illegal input! ###\033[0m\n")
                     else:
                         break
                 except ValueError:
-                    print("### Illegal input! ###\n")
+                    print("\033[91m### Illegal input! ###\033[0m\n")
 
             if(last_column_index+1 <= select_column): # set compare column, differ from the first column
                 compare_column_name = column[select_column]
             else:
                 compare_column_name = column[select_column-1]
-            print("column_name:",compare_column_name,", datatype:",my_dataframe[compare_column_name].dtype)
+            print("\033[93mcolumn_name:",compare_column_name,", datatype:",my_dataframe[compare_column_name].dtype,"\033[0m")
 
             new_df = pd.DataFrame(columns=my_dataframe.columns) # create a new dataframe, same columns as my_dataframe
             # print(new_df.dtypes)
@@ -228,7 +229,7 @@ def select_data(my_dataframe):
                 try:
                     command=int(input("Please enter a number: "))
                     if (command < 0 or command > commandnum):
-                        print("###Please enter 1-",commandnum,"! ###\n")
+                        print("\033[93m###Please enter 1-",commandnum,"! ###\033[0m\n")
                     else:
                         if(commandnum == 2):
                             if(command == 1):
@@ -237,7 +238,7 @@ def select_data(my_dataframe):
                                 command = 4
                         break
                 except ValueError:
-                    print("### Illegal input! ###\n")
+                    print("\033[91m### Illegal input! ###\033[0m\n")
 
             if(command == 0):
                 return pd.DataFrame()
@@ -312,18 +313,17 @@ def project(my_dataframe):
     while True:
         index = 1
         if len(remain)!=0:
-            print("\n***************** Current keep column: *****************")
-            print("Current keep column: ")
+            print("\n\033[94m***************** Current keep column: *****************\033[0m")
             for tmp in remain:
                 print(tmp)
-            print("********************************************************\n")
+            print("\033[94m********************************************************\033[0m\n")
 
         print("[0]: Finish")
         for c in column: # show colume
             print("[",index,"]: ",c,sep="",end="\n")
             index=index+1
         try:
-            select_column=int(input("Please enter a number: "))
+            select_column=int(input("Please enter a number, select the column need to project: "))
             if select_column == 0: # finish
                 break
             elif (select_column <= 0 or select_column > index-1) :
@@ -333,17 +333,13 @@ def project(my_dataframe):
                 for tmp in remain:
                     if column[select_column-1] == tmp:
                         same_Column = True
+                        print("\033[93m### This column is already in the list! ###\033[0m\n")
                         break
                 if same_Column == False :
                     remain.append(column[select_column-1])
                         
         except ValueError:
-            print("### Illegal input! ###\n")
-    
-    # if len(remain)==0:
-    #     return None
-    # add specific columns
-    # df = my_dataframe.loc[:, remain]
+            print("\033[91m## Illegal input! ###\033[0m\n")
 
     # delete all, except remain
     my_dataframe = my_dataframe.drop(my_dataframe.columns.difference(remain), axis=1)
@@ -357,12 +353,12 @@ def project(my_dataframe):
             my_dataframe = my_dataframe.drop_duplicates(subset=None, keep='first', inplace=False) # keep first appear otherwise all of the duplicate data will be delete
             break
         else:
-            print("### Illegal input! ###\n")
+            print("\033[91m### Illegal input! ###\033[0m\n")
 
     my_dataframe.reset_index(drop=True, inplace=True)
     return my_dataframe
 
-# Rename
+# Rename column
 def Rename(my_dataframe):
     column = my_dataframe.columns
     while True:
@@ -372,26 +368,28 @@ def Rename(my_dataframe):
             print("[",index,"]: ",c,sep="",end="\n")
             index=index+1
         try:
-            select_column=int(input("Please enter a number:"))
+            select_column=int(input("Please enter a number: "))
             if(select_column == 0):
                 return pd.DataFrame()
             if (select_column <= 0 or select_column > index-1) :
-                print("### Illegal input! ###\n")
+                print("\033[91m### Illegal input! ###\033[0m\n")
             else:
                 break
         except ValueError:
-            print("### Illegal input! ###\n")
+            print("\033[91m### Illegal input! ###\033[0m\n")
     
     old_column = column[select_column-1]
-    print("column_name:",old_column)
-
-    new_column = input("Please enter the new name for the column: ")
     if old_column not in my_dataframe.columns:
-        print("### Don't exist this column!! ###\n")
-        Rename(my_dataframe)
+        print("\033[93m### Don't exist this column!! ###\033[0m\n")
+        return Rename(my_dataframe)
     else:
+        # print("\033[93mcolumn_name:",old_column,"\033[0m")
+
+        # rename the column
+        new_column = input("Please enter the new name for the column: ")
         my_dataframe.rename(columns={old_column: new_column}, inplace=True)
-        print("Column renamed successfully!")
+        print("\033[95m"+old_column+"  ->  "+new_column+"\033[0m")
+        print("\033[95mColumn renamed successfully!\033[0m")
         return my_dataframe
 
 '''
@@ -421,15 +419,11 @@ def Cartesian_Product(my_dataframe):
     df = pd.DataFrame()
     df, success= loadfile(df)
     if success:
-        # df = pd.concat([my_dataframe, df])
-        
         my_dataframe = my_dataframe.merge(df, how = 'cross') # how = 'cross' is Cartesian Product
         df = df.reset_index(drop = True, inplace = True)
-        # print("********************DF********************")
-        # print(my_dataframe)
         return my_dataframe
     else:
-        print("### Fail to add a new file! ###")
+        print("\033[91m### Fail to add a new file! ###\033[0m")
         return pd.DataFrame()
     
 # Set Union(聯集)
@@ -438,10 +432,9 @@ def union(my_dataframe):
     df, success= loadfile(df)
     if success:
         df = my_dataframe.merge(df, how = 'outer') # how = 'outer' is Union
-        # df = df.reset_index(drop = True, inplace = True)
         return df
     else:
-        print("### Fail to add a new file! ###")
+        print("\033[91m### Fail to add a new file! ###\033[0m")
         return pd.DataFrame()
 
 """
@@ -459,13 +452,37 @@ def difference_data(my_dataframe):
     df = pd.DataFrame()
     df, success= loadfile(df)
     if success:
-        df = pd.concat([my_dataframe, df, df], ignore_index=True)
-        df = df.drop_duplicates(keep = False, ignore_index=True) # keep{‘first’, ‘last’, False}, False: drop all duplicates
-        # df = pd.concat([my_dataframe, df]).drop_duplicates(keep = False) # get exclusive
-        # df = df.reset_index(drop = True) # drop = True, avoid to create a new column, reset index
-        return df
+        # check the columns which is in df also in my_dataframe
+        common_columns=[]
+        for column1 in my_dataframe.columns:
+            for column2 in df.columns:
+                if column1 == column2:
+                    if column1 not in common_columns:
+                        common_columns.append(column1)
+                        break
+        if(len(common_columns) < df.columns.size or len(common_columns) < my_dataframe.columns.size):
+            return pd.DataFrame()
+                    
+        # set the same datatype as my_dataframe
+        output = pd.DataFrame(columns=my_dataframe.columns)
+        for i, dtype in my_dataframe.dtypes.items():
+            output[i] = output[i].astype(dtype)
+
+        # check the data is exist in df or not
+        for idx1, row1 in my_dataframe.iterrows():
+            Same = False
+            for idx2, row2 in df.iterrows():
+                if row1.equals(row2):
+                    Same = True
+                    break
+            if Same == False:
+                # if the data doesn't exist in df, add this row to output
+                output = pd.concat([output, my_dataframe.iloc[[idx1]]], ignore_index=True)
+                # print(output)
+
+        return output
     else:
-        print("### Fail to add a new file! ###")
+        print("\033[91m### Fail to add a new file! ###\033[0m")
         return pd.DataFrame()
     
 # Set insersection(交集)
@@ -474,10 +491,9 @@ def insersection(my_dataframe):
     df, success= loadfile(df)
     if success:
         df = my_dataframe.merge(df)
-        
         return df
     else:
-        print("### Fail to add a new file! ###")
+        print("\033[91m### Fail to add a new file! ###\033[0m")
         return pd.DataFrame()
     
 # Division(除法)   
@@ -485,6 +501,7 @@ def division(my_dataframe):
     df = pd.DataFrame()
     df, success = loadfile(df)
     if success:
+        # check the columns which is in df also in my_dataframe
         common_columns=[]
         for column1 in my_dataframe.columns:
             for column2 in df.columns:
@@ -493,21 +510,26 @@ def division(my_dataframe):
                         common_columns.append(column1)
                         break
         if(len(common_columns) < df.columns.size):
-            # print("### No common columns found for division! ###")
+            print("\033[91m### Column format errpr! ###\033[0m")
             return pd.DataFrame()
         
+        # find the columns which is not in df.columns
         remain_columns=[]
         for column in my_dataframe.columns:
             if column not in common_columns:
                 remain_columns.append(column)
 
-        tmp = pd.DataFrame(columns=my_dataframe.columns) # create a new dataframe, same columns as my_dataframe
-        output = pd.DataFrame(columns=my_dataframe.columns) # create a new dataframe, same columns as my_dataframe
-        for i, dtype in my_dataframe.dtypes.items(): # set the same datatype as my_dataframe
+        # create new dataframe, same columns as my_dataframe
+        tmp = pd.DataFrame(columns=my_dataframe.columns)
+        output = pd.DataFrame(columns=my_dataframe.columns)
+        # set the same datatype as my_dataframe
+        for i, dtype in my_dataframe.dtypes.items():
             output[i] = output[i].astype(dtype)
             tmp[i] = tmp[i].astype(dtype)
         copydata1 = my_dataframe # copy the data
-        index_to_drop = []
+
+
+        index_to_drop = [] # record the index which is already checked
         for idx1, row1 in my_dataframe.iterrows():
             for idx2, row2 in copydata1.iterrows():
                 Same = True
@@ -520,7 +542,8 @@ def division(my_dataframe):
                     tmp = pd.concat([tmp, pd.DataFrame([row2], columns=my_dataframe.columns)], ignore_index=True)
 
             if tmp.size > my_dataframe.shape[1] : # shape[1] = number of columns
-                output = compare(tmp, df, output) # check if the data as same as df or not, renew the output
+                # check if the data as same as df or not, renew the output
+                output = compare(tmp, df, output)
 
             # drop the data which is already checked
             copydata1.drop(index_to_drop, inplace=True)
@@ -532,7 +555,7 @@ def division(my_dataframe):
         return output
 
     else:
-        print("### Fail to add a new file! ###")
+        print("\033[91m### Fail to add a new file! ###\033[0m")
         return my_dataframe
     
 def compare(tmp, df, output):
@@ -547,7 +570,9 @@ def compare(tmp, df, output):
             if Same:
                 break
         if Same:
-            count += 1
+            count += 1 # count the number of same data
+
+    # if the data as same as df, renew the output
     if count == df.shape[0]: # shape[0] = number of rows
         output = pd.concat([output, tmp.iloc[[0]]], ignore_index=True)
     return output
@@ -558,7 +583,7 @@ def natural_join(my_dataframe):
     df = pd.DataFrame()
     df, success = loadfile(df)
     if success:
-        common_columns=[]
+        common_columns=[] # record the common columns
         for column1 in my_dataframe.columns:
             for column2 in df.columns:
                 if column1 == column2:
@@ -566,14 +591,15 @@ def natural_join(my_dataframe):
                         common_columns.append(column1)
                         break
 
+        # check the common columns is empty or not
         if len(common_columns) == 0:
-            print("### No common columns found for natural join! ###")
+            print("\033[93m### No common columns found for natural join! ###\033[0m")
             return pd.DataFrame()
         else:
             my_dataframe = my_dataframe.merge(df, on=common_columns, how='inner')
             return my_dataframe
     else:
-        print("### Fail to add a new file! ###")
+        print("\033[91m### Fail to add a new file! ###\033[0m")
         return pd.DataFrame()
 
 def writefile(my_dataframe):
@@ -582,26 +608,28 @@ def writefile(my_dataframe):
         if(filename == 'quit'):
             return
         fileName_Exist = os.path.isfile(filename+'.csv')
-        # print(fileName_Exist)
+        
+        # check the file is exist or not
         while(fileName_Exist):
-            command = input("Already have this filename, do you want to continue?(Y/N): ")
+            command = input("\033[93mAlready have this filename, do you want to continue?(Y/N): \033[0m")
             if(command == 'Y' or command == 'y' or command == 'YES' or command == 'yes'):
                 fileName_Exist = False
             elif(command == 'N' or command == 'n' or command == 'NO' or command == 'no'):
-                print("### Go back to the previous step ###\n")
+                print("\033[92m### Go back to the previous step ###\033[0m\n")
                 break
             else:
-                print("### Illegal input! ###\n")
+                print("\033[91m### Illegal input! ###\033[0m\n")
         
+        # create the file
         if(fileName_Exist == False):
             try:
                 my_dataframe.to_csv(filename+".csv", index =  False)
-                print('success created '+filename+'.csv-!!\n', sep='')
+                print('\033[93msuccess created '+filename+'.csv-!!\033[0m\n', sep='')
                 return
             except FileExistsError:
-                print("### FileExists Error! ###\n")
+                print("\033[91m### FileExists Error! ###\033[0m\n")
             except:
-                print("### Unexcepted Error! ###\n")
+                print("\033[91m### Unexcepted Error! ###\033[0m\n")
 
 def operationlist():
     print("—————————————————————————————————————————————————")
@@ -622,7 +650,7 @@ def operationlist():
     print("—————————————————————————————————————————————————")
 
 def Quit():
-    print("————————————————————————————————————————")
+    print("\n————————————————————————————————————————")
     print("|    Thank you using this program      |")
     print("——————————————————END———————————————————\n")
     # time.sleep(5)
@@ -635,7 +663,7 @@ def main():
     file_Exist = False
     my_dataframe = pd.DataFrame()
     out_dataframe = pd.DataFrame()
-    print("Wellcome to this program")
+    print("\nWellcome to this program")
     while(running):
         operationlist() # operation menu
         while True: # Enter the command
@@ -643,7 +671,7 @@ def main():
                 command=int(input("Please enter the command: "))
                 break
             except ValueError:
-                print("### Illegal input! ###\n")
+                print("\033[91m### Illegal input! ###\033[0m\n")
                 operationlist()
 
         if(command == 0):
@@ -655,137 +683,138 @@ def main():
         elif(command == 2):
             if(file_Exist):
                 out_dataframe = select_data(my_dataframe)
-                print("—————————————————————————————————— END Select ———————————————————————————————————")
+                print("\033[92m—————————————————————————————————— END Select ———————————————————————————————————\033[0m")
                 if(out_dataframe.empty):
                     print("### This file no data!! ###")
                 else:
                     print(out_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                print("\033[92m—————————————————————————————————————————————————————————————————————————————————\033[0m")
             else:
-                print("### Please Load file first!! ###\n")
+                print("\033[93m### Please Load file first!! ###\033[0m\n")
         elif(command == 3):
             if(file_Exist):
                 out_dataframe = project(my_dataframe)
-                print("————————————————————————————————— END Project ———————————————————————————————————")
+                print("\033[92m————————————————————————————————— END Project ———————————————————————————————————\033[0m")
                 if(out_dataframe.empty):
                     print("### This file no data!! ###")
                 else:
                     print(out_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                print("\033[92m—————————————————————————————————————————————————————————————————————————————————\033[0m")
             else:
-                print("### Please Load file first!! ###\n")
+                print("\033[93m### Please Load file first!! ###\033[0m\n")
 
         elif(command == 4):
             if(file_Exist):
                 out_dataframe = Rename(my_dataframe)
-                print("—————————————————————————————————— END Rename ———————————————————————————————————")
+                print("\033[92m—————————————————————————————————— END Rename ———————————————————————————————————\033[0m")
                 if(out_dataframe.empty):
                     print("### This file no data!! ###")
                 else:
                     print(out_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                print("\033[92m—————————————————————————————————————————————————————————————————————————————————\033[0m")
             else:
-                print("### Please Load file first!! ###\n")
+                print("\033[93m### Please Load file first!! ###\033[0m\n")
 
         elif(command == 5):
             if(file_Exist):
                 out_dataframe = Cartesian_Product(my_dataframe)
-                print("————————————————————————————— END Cartesian_Product —————————————————————————————")
+                print("\033[92m————————————————————————————— END Cartesian_Product —————————————————————————————\033[0m")
                 if(out_dataframe.empty):
                     print("### This file no data!! ###")
                 else:
                     print(out_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                print("\033[92m—————————————————————————————————————————————————————————————————————————————————\033[0m")
             else:
-                print("### Please Load file first!! ###\n")
+                print("\033[93m### Please Load file first!! ###\033[0m\n")
 
         elif(command == 6):
             if(file_Exist):
                 out_dataframe = union(my_dataframe)
-                print("——————————————————————————————————— End Union ———————————————————————————————————")
+                print("\033[92m——————————————————————————————————— End Union ———————————————————————————————————\033[0m")
                 if(out_dataframe.empty):
                     print("### This file no data!! ###")
                 else:
                     print(out_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                print("\033[92m—————————————————————————————————————————————————————————————————————————————————\033[0m")
             else:
-                print("### Please Load file first!! ###\n")
+                print("\033[93m### Please Load file first!! ###\033[0m\n")
 
         elif(command == 7):
             if(file_Exist):
                 out_dataframe = difference_data(my_dataframe)
-                print("———————————————————————————————— End Difference —————————————————————————————————")
+                print("\033[92m———————————————————————————————— End Difference —————————————————————————————————\033[0m")
                 if(out_dataframe.empty):
                     print("### This file no data!! ###")
                 else:
                     print(out_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                print("\033[92m—————————————————————————————————————————————————————————————————————————————————\033[0m")
             else:
-                print("### Please Load file first!! ###\n")
+                print("\033[93m### Please Load file first!! ###\033[0m\n")
 
         elif(command == 8):
             if(file_Exist):
                 out_dataframe = insersection(my_dataframe)
-                print("——————————————————————————————— END Insersection ————————————————————————————————")
+                print("\033[92m——————————————————————————————— END Insersection ————————————————————————————————\033[0m")
                 if(out_dataframe.empty):
                     print("### This file no data!! ###")
                 else:
                     print(out_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                print("\033[92m—————————————————————————————————————————————————————————————————————————————————\033[0m")
             else:
-                print("### Please Load file first!! ###\n")
+                print("\033[93m### Please Load file first!! ###\033[0m\n")
 
         elif(command == 9):
             if(file_Exist):
                 out_dataframe = division(my_dataframe)
-                print("————————————————————————————————— END Division ——————————————————————————————————")
+                print("\033[92m————————————————————————————————— END Division ——————————————————————————————————\033[0m")
                 if(out_dataframe.empty):
                     print("### This file no data!! ###")
                 else:
                     print(out_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                print("\033[92m—————————————————————————————————————————————————————————————————————————————————\033[0m")
             else:
-                print("### Please Load file first!! ###\n")
+                print("\033[93m### Please Load file first!! ###\033[0m\n")
 
         elif(command == 10):
             if(file_Exist):
                 out_dataframe = natural_join(my_dataframe)
-                print("——————————————————————————————— END Natural Join ————————————————————————————————")
+                print("\033[92m——————————————————————————————— END Natural Join ————————————————————————————————\033[0m")
                 if(out_dataframe.empty):
                     print("### This file no data!! ###")
                 else:
                     print(out_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                print("\033[92m—————————————————————————————————————————————————————————————————————————————————\033[0m")
             else:
-                print("### Please Load file first!! ###\n")
+                print("\033[93m### Please Load file first!! ###\033[0m\n")
 
         elif(command == 11):
             if(file_Exist):
                 writefile(my_dataframe)
             else:
-                print("### Please Load file first!! ###\n")
+                print("\033[93m### Please Load file first!! ###\033[0m\n")
 
         elif(command == 12):
             if(file_Exist):
-                print("——————————————————————————————— Show current data ———————————————————————————————")
+                print("\033[92m——————————————————————————————— Show current data ———————————————————————————————\033[0m")
                 print(my_dataframe)
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                print("\033[92m—————————————————————————————————————————————————————————————————————————————————\033[0m")
             else:
-                print("### Please Load file first!! ###\n")
+                print("\033[93m### Please Load file first!! ###\033[0m\n")
 
         elif(command == 13):
             if(file_Exist):
-                print("——————————————————————————————— Reset current data ——————————————————————————————")
+                print("\033[92m——————————————————————————————— Reset current data ——————————————————————————————\033[0m")
                 if(out_dataframe.empty):
-                    print("### Last file is empty!! ###")
+                    print("\033[93m### Last file is empty!! ###\033[0m")
                 else:
                     my_dataframe = out_dataframe
                     print("### Update success!! ###")
-                print("—————————————————————————————————————————————————————————————————————————————————")
+                    print(my_dataframe)
+                print("\033[92m—————————————————————————————————————————————————————————————————————————————————\033[0m")
             else:
-                print("### Please Load file first!! ###\n")
+                print("\033[93m### Please Load file first!! ###\033[0m\n")
         else:
-            print("### The command doesn't exist !! ###\n")
+            print("\033[91m### The command doesn't exist !! ###\033[0m\n")
         
         print()
 
