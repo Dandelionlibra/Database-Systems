@@ -12,13 +12,15 @@ def loadfile(my_dataframe):
     if(filename == "quit"):
         return  pd.DataFrame(), False
     try:
-        # my_dataframe = pd.read_csv("C:\\Users\\user\\OneDrive\\桌面\\course\\Database Systems\\Database-Systems_midterm\\"+filename+".csv")
+        # my_dataframe = pd.read_csv("路徑"+filename+".csv")
         my_dataframe = pd.read_csv(filename+".csv", thousands=',')
         if(my_dataframe.empty):
             print("\033[93m### This file no data!! ###\033[0m\n")
             return loadfile(my_dataframe)
         
-        print("\033[93m"+filename+'.csv-success!!\033[0m')
+        print("\033[93mLoad .csv success!!\033[0m")
+        print("\033[93mCurrent table is: "+filename+'\033[0m')
+
         print(my_dataframe)
         print()
         return my_dataframe, True
@@ -383,8 +385,6 @@ def Rename(my_dataframe):
         print("\033[93m### Don't exist this column!! ###\033[0m\n")
         return Rename(my_dataframe)
     else:
-        # print("\033[93mcolumn_name:",old_column,"\033[0m")
-
         # rename the column
         new_column = input("Please enter the new name for the column: ")
         my_dataframe.rename(columns={old_column: new_column}, inplace=True)
@@ -488,7 +488,7 @@ def difference_data(my_dataframe):
 # Set insersection(交集)
 def insersection(my_dataframe):
     df = pd.DataFrame()
-    df, success= loadfile(df)
+    df, success= loadfile(df) # inner
     if success:
         df = my_dataframe.merge(df)
         return df
